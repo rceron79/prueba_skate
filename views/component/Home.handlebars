@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Skater Park</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Usuarios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/login">Iniciar Sesion</a>
+          <a class="dropdown-item" href="/skater-create">Registrarse</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+      <a href="/login" class="btn btn-primary mt-2">Iniciar Sesión</a>
+      </li>
+       <li>
+      <a href="/skater-create" class="btn btn-success mt-2">Registrarme</a>
+       </li>
+      
+    </ul>
+  </div>
+</nav>
+    <h1>Skate Park</h1>
+{{#if message}}
+{{message}}
+{{/if}}
+    <div class="py-4">
+      <h2>Lista de participantes</h2>
+
+      <hr />
+
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Foto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Años de experiencia</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each skaters}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td><img src="/imgs/{{this.foto}}" alt="foto" width="80px"></td>
+          <td>{{this.nombre}}</td>
+          <td>{{this.anos_experiencia}}</td>
+          <td>{{this.especialidad}}</td>
+          <td class="bg-warning"><input type="checkbox" name="estado" aria-label="Aprobado" value={{this.estado}} disabled
+          {{#if this.estado}}
+            checked
+            {{/if}}
+          />Aprobado</td>
+        </tr>
+        {{/each}}
+      </tbody>
+      </table>
+
+    </div>

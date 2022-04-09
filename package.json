@@ -1,0 +1,29 @@
+{
+  "name": "skate1",
+  "version": "1.0.0",
+  "description": "```bash\r └── src\r     ├── routes.js\r     └── controllers\r         ├── login.js\r         └── skaters.js\r     └── models\r         └── db.js\r └── migrate.js\r └── rutas\r     └── front.js\r     └── public\r         └── imgs\r         └── css\r └── server.js\r └── Assets\r     └── img\r └── views\r     ├── Dashboard.handlebars\r     ├── Login.handlebars\r     ├── error.hadlebars\r     ├── Registro.handlebars\r     ├── Admin.handlebars\r     ├── Datos.handlebars\r     └── layouts\r         └── main.handlebars\r     └── component\r         └── Admin.handlebars\r         └── Datos.handlebars\r         └── Home.handlebars\r └── data.sql\r ```",
+  "main": "server.js",
+  "scripts": {
+    "test:db": "node db.js",
+    "start": "node server.js",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "bootstrap": "^5.1.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-fileupload": "^1.3.1",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^6.0.4",
+    "install": "^0.13.0",
+    "jquery": "^3.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "npm": "^8.6.0",
+    "pg": "^8.7.3"
+  }
+}
